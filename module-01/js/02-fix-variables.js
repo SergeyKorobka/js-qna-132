@@ -6,7 +6,8 @@
  *
  * Початкове ім'я "Mango", збільшення score на 5 і шаблон повідомлення не змінюй.
  */
+
 const userName = 'Mango';
-const score = 10;
-score = score + 5;
-console.log(`${userNme} отримав ${score} балів`);
+let score = 10;
+score += 5;
+console.log(`${userName} отримав ${score} балів`);

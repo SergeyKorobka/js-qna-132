@@ -12,5 +12,14 @@
  */
 const totalItems = 137;
 const boxCapacity = 12;
+const fullBoxes = Math.floor(137 / 12);
+const remainingItems = 137 % 12;
+// const itemsAfterDelivery = totalItems + 7;
+let itemsAfterDelivery = totalItems;
+itemsAfterDelivery += 7;
 
 // Виконай обчислення та виведи результати.
+
+console.log(fullBoxes);
+console.log(remainingItems);
+console.log(itemsAfterDelivery);

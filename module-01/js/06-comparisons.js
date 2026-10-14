@@ -7,7 +7,7 @@
  * Створи isExactQuantity: явно перетвори "10" на число та строго порівняй із 10.
  */
 console.log(10 > '7');
-console.log('20' > '100');
+console.log('3' > '19');
 console.log('5' == 5);
 console.log('5' === 5);
 console.log(1 == true);

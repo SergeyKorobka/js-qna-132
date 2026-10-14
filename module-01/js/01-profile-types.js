@@ -13,3 +13,18 @@
  */
 
 // Оголоси змінні, зміни isOnline та виведи значення і типи.
+
+const userName = 'Олена';
+const age = 24;
+let isOnline = true;
+const avatar = null;
+let lastVisit;
+
+console.log(isOnline, typeof isOnline);
+isOnline = false;
+
+console.log(userName, typeof userName);
+console.log(age, typeof age);
+console.log(avatar, typeof avatar);
+console.log(lastVisit, typeof lastVisit);
+console.log(isOnline, typeof isOnline);
