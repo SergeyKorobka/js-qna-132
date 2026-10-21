@@ -11,6 +11,18 @@
  */
 function formatProfileLink(link) {
   // Нормалізуй і поверни посилання.
+  const trimmedLink = link.trim();
+  let normalizedLink = trimmedLink.toLowerCase();
+
+  if (normalizedLink.startsWith('http://')) {
+    normalizedLink = 'https://' + normalizedLink.slice(7);
+  }
+
+  if (!normalizedLink.endsWith('/')) {
+    normalizedLink += '/';
+  }
+
+  return normalizedLink;
 }
 
 console.log(formatProfileLink('  HTTP://My-Site.com/Profile  '));

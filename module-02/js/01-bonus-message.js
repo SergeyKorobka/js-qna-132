@@ -7,7 +7,13 @@
  * Використай лише інструкцію if без блоку else. Змінну message оголоси поза
  * блоком, щоб вона була доступна під час console.log().
  */
-const orderTotal = 1750;
+const orderTotal = 100;
 let message = 'Звичайне замовлення';
+
+if (orderTotal >= 1500) {
+  message = 'До замовлення додано подарунок';
+}
+
+console.log(message);
 
 // Додай перевірку та виведи message.

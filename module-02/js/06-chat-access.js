@@ -14,3 +14,10 @@ const isFriend = true;
 const isDnd = false;
 
 // Створи canOpenChat і shouldNotify та виведи їх.
+
+const canOpenChat = isOnline && isFriend && !isDnd;
+// console.log(canOpenChat);
+
+const shouldNotify = !isOnline || isDnd;
+
+// console.log(shouldNotify);

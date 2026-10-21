@@ -11,6 +11,16 @@
  */
 function getTemperatureLevel(temperature) {
   // Додай розгалуження й поверни рядок.
+
+  if (temperature < 0) {
+    return 'Мороз';
+  } else if (temperature <= 15) {
+    return 'Прохолодно';
+  } else if (temperature <= 25) {
+    return 'Тепло';
+  } else {
+    return 'Спекотно';
+  }
 }
 
 console.log(getTemperatureLevel(-4));

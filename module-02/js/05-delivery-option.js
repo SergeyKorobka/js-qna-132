@@ -9,7 +9,21 @@
  */
 function getDeliveryMessage(option) {
   // Додай switch і поверни повідомлення.
+
+  switch (option) {
+    case 'pickup':
+      return 'Самовивіз сьогодні';
+
+    case 'courier':
+      return "Кур'єр доставить завтра";
+
+    case 'post':
+      return 'Відправимо поштою';
+
+    default:
+      return 'Уточніть спосіб доставки';
+  }
 }
 
-console.log(getDeliveryMessage('courier'));
+console.log(getDeliveryMessage('post'));
 console.log(getDeliveryMessage('drone'));

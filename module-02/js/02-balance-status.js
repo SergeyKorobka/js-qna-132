@@ -7,7 +7,14 @@
  * Використай конструкцію if...else.
  */
 const balance = 800;
-const payment = 950;
-let message;
+const payment = 700;
+let message = '';
 
+if (balance >= payment) {
+  message = 'Оплату дозволено';
+} else {
+  message = 'Недостатньо коштів';
+}
+
+console.log(message);
 // Додай розгалуження та виведи message.
