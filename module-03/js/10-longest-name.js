@@ -8,4 +8,20 @@
 
 function findLongestName(names) {
   /* Перебери масив. */
+  if (names.length === 0) {
+    return "";
+  }
+
+  let longestName = names[0];
+
+  for (const name of names) {
+    if (name.length > longestName.length) {
+      longestName = name;
+    }
+  }
+
+  return longestName;
 }
+
+console.log(findLongestName(["Оля", "Олександр", "Максим"]));
+console.log(findLongestName([]));

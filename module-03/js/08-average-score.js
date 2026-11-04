@@ -7,4 +7,19 @@
  * ()→0. */
 function averageScore() {
   /* Використай arguments. */
+  if (arguments.length === 0) {
+    return 0;
+  }
+
+  let total = 0;
+
+  for (const arg of arguments) {
+    total += arg;
+  }
+
+  return Math.round(total / arguments.length);
 }
+
+console.log(averageScore(8, 9, 10));
+console.log(averageScore(5));
+console.log(averageScore());

@@ -7,9 +7,11 @@
  * 4. Виведи оновлений масив і його довжину.
  * Початковий масив не скорочуй і не розширюй.
  */
-const participants = ['Олена', 'Ігор', 'Максим', 'Анна'];
-const firstParticipant = '';
-const lastParticipant = '';
+const participants = ["Олена", "Ігор", "Максим", "Анна"];
+const firstParticipant = participants[0];
+const lastParticipant = participants[participants.length - 1];
+const index = participants.indexOf("Ігор");
+participants[index] = "Марія";
 // Заміни потрібний елемент.
 console.log(firstParticipant); // Олена
 console.log(lastParticipant); // Анна

@@ -7,7 +7,31 @@
  */
 function mergeUniqueOrders(firstOrders, secondOrders) {
   // Об’єднай, відфільтруй повтори циклом і поверни результат.
+  const newArray = [];
+  const thirdOrders = firstOrders.concat(secondOrders);
+
+  for (const order of thirdOrders) {
+    if (!newArray.includes(order)) {
+      newArray.push(order);
+    }
+  }
+
+  return newArray;
 }
+// function mergeUniqueOrders(firstOrders, secondOrders) {
+//   // Об’єднай, відфільтруй повтори циклом і поверни результат.
+//   const fourthOrders = [];
+//   const thirdOrders = firstOrders.concat(secondOrders);
+
+//   for (let i = 0; i < thirdOrders.length; i += 1) {
+//     if (fourthOrders.includes(thirdOrders[i])) {
+//       continue;
+//     } else {
+//       fourthOrders.push(thirdOrders[i]);
+//     }
+//   }
+//   return fourthOrders;
+// }
 const morningOrders = [101, 102, 103];
 const eveningOrders = [103, 104, 101, 105];
 console.log(mergeUniqueOrders(morningOrders, eveningOrders)); // [101,102,103,104,105]

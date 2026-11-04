@@ -6,6 +6,13 @@
  *
  * Очікуваний рядок: "html | css | git | javascript".
  */
-const tagsString = 'html,css,git';
+const tagsString = "html,css,git";
 // Створи tags, доповни його та створи formattedTags.
+const tags = tagsString.split(",");
+// console.log(tags);
+
+tags.push("javascript");
+
+const formattedTags = tags.join(" | ");
+
 console.log(formattedTags); // html | css | git | javascript

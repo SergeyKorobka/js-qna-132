@@ -8,4 +8,8 @@
 
 function createSlug(title) {
   /* Реалізація. */
+  return title.toLowerCase().split(" ").join("-");
 }
+
+console.log(createSlug("Основи JavaScript"));
+console.log(createSlug("Масиви і цикли"));
