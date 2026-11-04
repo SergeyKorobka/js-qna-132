@@ -8,6 +8,15 @@
  * data — значення через " | ".
  */
 function getProfileStats(profile) {
-  // Реалізація.
+  const keys = Object.keys(profile);
+  const values = Object.values(profile);
+  // const entries = Object.entries(profile);
+
+  return {
+    count: keys.length,
+    fields: keys.join(', '),
+    data: values.join(' | '),
+  };
 }
+
 console.log(getProfileStats({ name: 'Олена', age: 24, city: 'Львів' }));

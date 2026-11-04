@@ -6,5 +6,20 @@
  * {}→0. */
 
 function calcSalaryTotal(salaries) {
-  /* Перебери значення. */
+  const values = Object.values(salaries);
+
+  if (values.length === 0) {
+    return 0;
+  }
+
+  let total = 0;
+
+  for (const value of values) {
+    total += value;
+  }
+
+  return total;
 }
+
+console.log(calcSalaryTotal({ dev: 30000, qa: 22000 }));
+console.log(calcSalaryTotal({}));

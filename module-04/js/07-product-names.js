@@ -7,5 +7,14 @@
  * []→[]. */
 
 function getProductNames(products) {
-  /* Створи результат. */
+  const newArr = [];
+
+  for (const product of products) {
+    newArr.push(product.name);
+  }
+
+  return newArr;
 }
+
+console.log(getProductNames([{ name: 'Кава' }, { name: 'Чай' }]));
+console.log(getProductNames([]));

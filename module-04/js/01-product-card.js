@@ -13,5 +13,14 @@ const product = {
   stock: 12,
   dimensions: { width: 18, height: 25 },
 };
+
+product.stock += 5;
+product.dimensions.height = 30;
+product.isAvailable = true;
+
 const propertyName = 'name';
-// Зміни й доповни product, потім отримай dynamicValue.
+
+console.log(product.stock); //17
+console.log(product.dimensions.height); //30
+console.log(product.isAvailable); //true
+console.log(product[propertyName]); // "Desk lamp"
