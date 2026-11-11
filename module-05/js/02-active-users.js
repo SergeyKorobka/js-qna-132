@@ -10,8 +10,15 @@ const users = [
   { name: 'Анна', email: 'anna@mail.com', isActive: true },
 ];
 
-const getActiveEmails = users => {
-  // Реалізація
-};
+// const getActiveEmails = users => {
+//   const activeUsers = users.filter(user => user.isActive);
+//   return activeUsers.map(user => user.email);
+//   // Реалізація
+// };
 
+const getActiveEmails = users => users
+  .filter(user => user.isActive)
+  .map(user => user.email);
+  
+// Реалізація
 console.log(getActiveEmails(users)); // ["olena@mail.com", "anna@mail.com"]

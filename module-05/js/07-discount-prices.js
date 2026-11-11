@@ -10,6 +10,14 @@
  * ([100,250],20)→[80,200];
  * []→[]. */
 
-const applyDiscount = (prices, percent) => {
-  /* Поверни результат */
-};
+// const applyDiscount = (prices, percent) => {
+//   return prices.map(price => {
+//     const discount = price * (percent / 100);
+//     return Math.round(price - discount);
+//   });
+// };
+
+const applyDiscount = (prices, percent) =>
+  prices.map(price => Math.round(price * (1 - percent / 100)));
+
+console.log(applyDiscount([100, 250, 300], 20));

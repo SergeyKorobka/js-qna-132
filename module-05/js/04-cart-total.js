@@ -10,6 +10,7 @@ const cart = [
   { name: 'Cable', price: 250, quantity: 3 },
 ];
 
-const calcCartTotal = cart => {};
+const calcCartTotal = cart =>
+  cart.reduce((acc, product) => acc + product.price * product.quantity, 0);
 
 console.log(calcCartTotal(cart)); // 5250

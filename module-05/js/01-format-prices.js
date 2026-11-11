@@ -7,5 +7,8 @@
  */
 
 const prices = [120, 450, 80, 999];
+
 // Створи formattedPrices.
+
+const formattedPrices = prices.map(price => `${price} грн`);
 console.log(formattedPrices); // ["120 грн", "450 грн", "80 грн", "999 грн"]

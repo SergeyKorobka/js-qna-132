@@ -7,6 +7,12 @@
  * books без товарів→0. */
 
 const calcCategoryTotal = (products, category) => {
+  return products.reduce((acc, product) => {
+    if (product.category === category) {
+      return acc + product.price;
+    }
+    return acc;
+  }, 0);
   /* Поверни суму */
 };
 
@@ -17,4 +23,4 @@ const products = [
   { category: 'car', price: 300 },
 ];
 
-calcCategoryTotal(products, 'food');
+console.log(calcCategoryTotal(products, 'food'));

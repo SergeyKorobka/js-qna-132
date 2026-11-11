@@ -11,9 +11,11 @@ const team = [
   { email: 'qa@mail.com', role: 'qa', isActive: true },
 ];
 
-const findMemberByEmail = (members, email) => {};
-
-const canStartProject = members => {};
+const findMemberByEmail = (members, email) =>
+  members.find(member => member.email === email);
+const canStartProject = members =>
+  members.every(member => member.isActive) &&
+  members.some(member => member.role === 'lead');
 
 console.log(findMemberByEmail(team, 'dev@mail.com'));
 console.log(canStartProject(team)); // true

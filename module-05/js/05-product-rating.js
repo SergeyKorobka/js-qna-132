@@ -14,6 +14,11 @@ const products = [
   { name: 'Keyboard', rating: 4.8, stock: 7 },
   { name: 'Cable', rating: 4.1, stock: 12 },
 ];
-const getAvailableProductLabels = products => {};
+const getAvailableProductLabels = products => {
+  return products
+    .filter(product => product.stock > 0)
+    .toSorted((a, b) => b.rating - a.rating)
+    .map(product => `${product.name} - ${product.rating}`);
+};
 
 console.log(getAvailableProductLabels(products));
