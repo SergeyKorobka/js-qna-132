@@ -17,7 +17,16 @@ class User {
  */
 class PremiumUser extends User {
   // Ваш код тут
+  constructor(name, plan) {
+    super(name);
+    this.plan = plan;
+  }
+
+  getInfo() {
+    return `${super.getInfo()}, план: ${this.plan}`;
+  }
 }
 
-// const user = new PremiumUser('Марія', 'Pro');
+const user = new PremiumUser("Марія", "Pro");
+// console.log(user);
 // console.log(user.getInfo()); // "Користувач: Марія, план: Pro"

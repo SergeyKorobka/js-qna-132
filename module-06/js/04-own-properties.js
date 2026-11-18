@@ -1,6 +1,6 @@
 const settings = {
-  language: 'uk',
-  theme: 'dark',
+  language: "uk",
+  theme: "dark",
 };
 
 /**
@@ -9,6 +9,7 @@ const settings = {
  */
 function getOwnPropertyNames(object) {
   // Ваш код тут
+  return Object.keys(object);
 }
 
 // console.log(getOwnPropertyNames(settings)); // ['language', 'theme']

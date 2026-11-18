@@ -1,5 +1,5 @@
 const user = {
-  name: 'Олена',
+  name: "Олена",
 
   /**
    * Доповніть createGreeting. Метод має повертати стрілкову функцію,
@@ -7,6 +7,11 @@ const user = {
    */
   createGreeting() {
     // Ваш код тут
+    // 1
+    // const greet = () => `Привіт, ${this.name}`;
+    // return greet;
+    // 2
+    return () => `Привіт, ${this.name}!`;
   },
 };
 

@@ -1,8 +1,8 @@
 const cart = {
   items: [
-    { name: 'Навушники', price: 1200 },
-    { name: 'Чохол', price: 350 },
-    { name: 'Кабель', price: 180 },
+    { name: "Навушники", price: 1200 },
+    { name: "Чохол", price: 350 },
+    { name: "Кабель", price: 180 },
   ],
 
   /**
@@ -11,6 +11,15 @@ const cart = {
    */
   getTotal() {
     // Ваш код тут
+    // 1
+    // let total = 0;
+    // for (const item of this.items) {
+    //   total += item.price;
+    // }
+    // return total;
+
+    // 2
+    return this.items.reduce((total, item) => total + item.price, 0);
   },
 };
 

@@ -18,8 +18,20 @@ class Course {
  */
 class OnlineCourse extends Course {
   // Ваш код тут
+  constructor(title, lessons, platform) {
+    super(title, lessons);
+    this.platform = platform;
+  }
+
+  start() {
+    return `Курс ${this.title} запущено на ${this.platform}`;
+  }
+
+  getInfo() {
+    return `${super.getInfo()}, платформа: ${this.platform}}`;
+  }
 }
 
-// const course = new OnlineCourse('JavaScript', 12, 'Meet');
-// console.log(course.getInfo()); // 'JavaScript: 12 уроків, платформа: Meet'
-// console.log(course.start()); // 'Курс JavaScript запущено на Meet'
+const course = new OnlineCourse("JavaScript", 12, "Meet");
+console.log(course.getInfo()); // 'JavaScript: 12 уроків, платформа: Meet'
+console.log(course.start()); // 'Курс JavaScript запущено на Meet'

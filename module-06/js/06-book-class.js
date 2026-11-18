@@ -5,9 +5,13 @@
  * і зберігає ці значення у властивостях екземпляра.
  */
 class Book {
-  // Ваш код тут
+  constructor(params) {
+    this.title = params.title;
+    this.author = params.author;
+  }
 }
 
-// const book = new Book({ title: 'Місто', author: 'Валер’ян Підмогильний' });
+const book = new Book({ title: "Місто", author: "Валер’ян Підмогильний" });
+// console.log(book);
 // console.log(book.title); // 'Місто'
 // console.log(book.author); // 'Валер’ян Підмогильний'
