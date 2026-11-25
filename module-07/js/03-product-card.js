@@ -1,8 +1,11 @@
-const product = { name: 'Навушники', price: 2400, available: true };
-const containerEl = document.querySelector('.js-products');
+const product = { name: "Навушники", price: 2400, available: true };
 
 /**
- * Створи `article` із класом `product-card`, заголовок з назвою та абзац із
- * текстом "2400 грн". Додай їх у `.js-products`.
- * Перевірка: картка має 2 дочірні елементи; ціна має "грн"; available не змінюється.
+ * Створи `article` із класом `product-card` та додай в середину нього:
+ * заголовок (h2) з назвою
+ * абзац (p) із текстом "2400 грн".
+ * абзац (p) і додай в нього текст "В наявності" якщо available: true, в іншому випадку "Товар відсутній"
+ * Додай `article` у `.js-products`.
+ *
+ * Перевірка: картка має 3 дочірні елементи; ціна має "грн", наявність відповідає available;
  */
