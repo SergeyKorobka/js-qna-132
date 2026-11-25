@@ -17,3 +17,20 @@ const messagesEl = document.querySelector(".js-messages");
  *
  * Перевірка: пункти списку мають фільтруватися за запитом без урахування регістру.
  */
+
+const createMarkup = (items) => {
+  return items.map((item) => `<li>${item}</li>`).join("");
+};
+
+messagesEl.innerHTML = createMarkup(messages);
+
+searchEl.addEventListener("input", filterMessages);
+
+function filterMessages(e) {
+  const value = e.target.value.trim().toLowerCase();
+
+  const filteredMessages = messages.filter((message) =>
+    message.toLowerCase().includes(value)
+  );
+  messagesEl.innerHTML = createMarkup(filteredMessages);
+}

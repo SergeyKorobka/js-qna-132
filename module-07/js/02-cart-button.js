@@ -4,3 +4,15 @@
  */
 
 // Додай слухач і обробник події.
+const btnCart = document.querySelector(".js-cart");
+const cartSpan = document.querySelector(".js-cart span");
+
+let counter = 0;
+
+btnCart.addEventListener("click", (e) => {
+  console.log("target:", e.target);
+  console.log("currentTarget:", e.currentTarget);
+  //   cartSpan.textContent++;
+  counter += 1;
+  cartSpan.textContent = counter;
+});

@@ -9,3 +9,21 @@ const product = { name: "Навушники", price: 2400, available: true };
  *
  * Перевірка: картка має 3 дочірні елементи; ціна має "грн", наявність відповідає available;
  */
+
+const productsEl = document.querySelector(".js-products");
+
+const article = document.createElement("article");
+article.classList.add("product-card");
+
+const title = document.createElement("h2");
+title.textContent = product.name;
+
+const price = document.createElement("p");
+price.textContent = `${product.price} грн`;
+
+const info = document.createElement("p");
+info.textContent = product.available ? "В наявності" : "Товар відсутній";
+
+article.append(title, price, info);
+
+productsEl.append(article);
